@@ -4,7 +4,7 @@ const dataInputLength = input.dataset.length;
 input.addEventListener('blur', checknumberOfSymbol);
 
 function checknumberOfSymbol(event) {
-    
+        
     if (event.currentTarget.value.length == dataInputLength) {
         input.classList.add('valid');
 }
@@ -12,6 +12,6 @@ function checknumberOfSymbol(event) {
         input.classList.add('invalid');
 }
     
-}
+};
 
    
