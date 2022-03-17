@@ -11,9 +11,11 @@ const boxesEl = document.querySelector('#boxes');
 buttonCreateEl.addEventListener('click', createBoxes);
 buttonDestroyEl.addEventListener('click', destroyBoxes);
 
+let size = 30;
+
 function createBoxes(amount) {
   amount = inputEl.value;
- let size = 30;
+ 
   for (let i = 1; i <= amount; i += 1) {
     const divEl = document.createElement('div');
     
@@ -24,9 +26,10 @@ function createBoxes(amount) {
     divEl.style.backgroundColor = getRandomHexColor();
     boxesEl.append(divEl);
   }
-  
+  return size;
 };
 
 function destroyBoxes() {
   boxesEl.innerHTML = '';
+  size = 30;
 };

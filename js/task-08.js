@@ -9,14 +9,18 @@ function onFormSubmit(event) {
     const email = event.currentTarget.elements.email.value;
     const password = event.currentTarget.elements.password.value;
 
-    if (email === '' || password === '') {
-        alert('Все поля должны быть заполнены');
-    };
-
     const formDate = {
         email,
         password,
-    }
-    console.log(formDate);
+    };
+
+    if (email === '' || password === '') {
+        alert('Все поля должны быть заполнены');
+    };
+    if (email !== '' && password !== '') {
+        console.log(formDate);
+    };
+    
+    
     event.currentTarget.reset();
 }

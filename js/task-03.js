@@ -16,7 +16,7 @@ const images = [
 const makeImageEl = ({url, alt}) => {
   return  `
     <li>
-      <img src=${url} alt=${alt} width=300>
+      <img src=${url} width="300" alt="${alt}">
     </li>`
 }
   
